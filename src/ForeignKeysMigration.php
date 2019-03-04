@@ -19,6 +19,12 @@ class ForeignKeysMigration extends Migration
     use ForeignLoader;
 
     /**
+     * Defaults
+     */
+    public const ON_UPDATE = 'restrict';
+    public const ON_DELETE = 'restrict';
+
+    /**
      * Run the migrations.
      *
      * @return void
