@@ -1,2 +1,74 @@
-# foreign-loader
-Laravel foreign keys loader helper
+# Laravel foreign keys loader helper
+Diplodocker project helpers
+
+
+### Install
+* Install [laravel](https://laravel.com/docs/master/installation) =)
+* `composer require diplodocker/foreign-loader --dev`
+
+### Use trait
+```php
+<?php
+
+use Diplodocker\Concerns\ForeignLoader;
+use Illuminate\Database\Migrations\Migration;
+
+class SomeMigrationFileName extends Migration
+{
+    // use trait
+    use ForeignLoader;
+
+    // set ON_UPDATE and ON_DELETE actions
+    private const ON_UPDATE = 'restrict';
+    private const ON_DELETE = 'restrict';
+
+    private $keys = [
+        'user.city_id' => 'city.id',
+        'user.company_id' => 'company.id',
+        ...
+    ];
+
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        // your code here
+        $this->loadForeignKeys();
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        // your code here
+        $this->dropForeignKeys();
+    }
+
+```
+### Use class
+```php
+<?php
+
+use Diplodocker\Concerns\ForeignLoader;
+use Diplodocker\ForeignKeysMigration;
+// or use Diplodocker\ForeignKeysMigration as Migration
+
+class SomeMigrationFileName extends ForeignKeysMigration
+{
+    // set ON_UPDATE and ON_DELETE actions
+    private const ON_UPDATE = 'restrict';
+    private const ON_DELETE = 'restrict';
+
+    private $keys = [
+        'user.city_id' => 'city.id',
+        'user.company_id' => 'company.id',
+        ...
+    ];
+
+```
