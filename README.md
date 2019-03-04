@@ -19,10 +19,10 @@ class SomeMigrationFileName extends Migration
     use ForeignLoader;
 
     // set ON_UPDATE and ON_DELETE actions
-    private const ON_UPDATE = 'restrict';
-    private const ON_DELETE = 'restrict';
+    public const ON_UPDATE = 'restrict';
+    public const ON_DELETE = 'restrict';
 
-    private $keys = [
+    public $keys = [
         'user.city_id' => 'city.id',
         'user.company_id' => 'company.id',
         ...
@@ -55,17 +55,11 @@ class SomeMigrationFileName extends Migration
 ```php
 <?php
 
-use Diplodocker\Concerns\ForeignLoader;
 use Diplodocker\ForeignKeysMigration;
-// or use Diplodocker\ForeignKeysMigration as Migration
 
 class SomeMigrationFileName extends ForeignKeysMigration
 {
-    // set ON_UPDATE and ON_DELETE actions
-    private const ON_UPDATE = 'restrict';
-    private const ON_DELETE = 'restrict';
-
-    private $keys = [
+    public $keys = [
         'user.city_id' => 'city.id',
         'user.company_id' => 'company.id',
         ...
