@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Diplodocker;
+namespace Diplodocker\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
