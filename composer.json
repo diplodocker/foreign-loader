@@ -3,6 +3,7 @@
     "description": "Laravel foreign keys loader helper (part of Diplodocker project)",
     "type": "library",
     "license": "MIT",
+    "keywords": ["laravel","migrations","diplodocker","laravel-package"],
     "minimum-stability": "dev",
     "require": {
         "php": "^7.1.3"
