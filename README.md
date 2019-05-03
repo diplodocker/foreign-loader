@@ -4,7 +4,7 @@ Diplodocker project helpers
 
 ### Install
 * Install [laravel](https://laravel.com/docs/master/installation) =)
-* `composer require diplodocker/foreign-loader --dev`
+* `composer require diplodocker/foreign-loader`
 
 ### Use trait
 ```php
