@@ -1,6 +1,7 @@
 {
     "name": "diplodocker/foreign-loader",
     "description": "Laravel foreign keys loader helper (part of Diplodocker project)",
+    "homepage": "https://github.com/diplodocker/foreign-loader",
     "type": "library",
     "license": "MIT",
     "minimum-stability": "dev",

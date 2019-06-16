@@ -25,4 +25,3 @@ class ForeignLoaderProvider extends ServiceProvider
         //
     }
 }
-
