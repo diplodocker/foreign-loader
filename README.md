@@ -1,10 +1,11 @@
 # Laravel foreign keys loader helper
-Diplodocker project helpers
+[![Made for Laravel](https://img.shields.io/badge/made%20for-laravel-orange.svg?style=flat&logo=Laravel)](https://laravel.com/)
 
+Diplodocker project helpers
 
 ### Install
 * Install [laravel](https://laravel.com/docs/master/installation) =)
-* `composer require diplodocker/foreign-loader --dev`
+* `composer require diplodocker/foreign-loader`
 
 ### Use trait
 ```php
