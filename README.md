@@ -1,7 +1,8 @@
 # Laravel foreign keys loader helper
 
 [![Build Status](https://travis-ci.org/diplodocker/foreign-loader.svg?branch=master)](https://travis-ci.org/diplodocker/foreign-loader)
-[![Made for Laravel](https://img.shields.io/badge/made%20for-laravel-orange.svg?style=flat&logo=Laravel)](https://laravel.com/)
+[![Made for Laravel](https://img.shields.io/badge/made%20for-laravel-orange.svg?style=flat&logo=Laravel&logoColor=fff)](https://laravel.com/)
+![PHP from Packagist](https://img.shields.io/packagist/php-v/diplodocker/foreign-loader.svg?color=8a92bb&logo=php&logoColor=fff)
 
 Diplodocker project helpers
 
