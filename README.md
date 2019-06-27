@@ -10,7 +10,25 @@ Diplodocker project helpers
 * Install [laravel](https://laravel.com/docs/master/installation) =)
 * `composer require diplodocker/foreign-loader`
 
-### Use trait
+
+### Use class
+```php
+<?php
+
+use Diplodocker\ForeignKeysMigration;
+
+class SomeMigrationFileName extends ForeignKeysMigration
+{
+    public $keys = [
+        'user.city_id' => 'city.id',
+        'user.company_id' => 'company.id',
+        ...
+    ];
+
+```
+
+
+### Or use trait
 ```php
 <?php
 
@@ -53,20 +71,5 @@ class SomeMigrationFileName extends Migration
         // your code here
         $this->dropForeignKeys();
     }
-
-```
-### Use class
-```php
-<?php
-
-use Diplodocker\ForeignKeysMigration;
-
-class SomeMigrationFileName extends ForeignKeysMigration
-{
-    public $keys = [
-        'user.city_id' => 'city.id',
-        'user.company_id' => 'company.id',
-        ...
-    ];
 
 ```
