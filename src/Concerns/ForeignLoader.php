@@ -45,10 +45,12 @@ trait ForeignLoader
             [$fromName,] = explode('.', $from);
             [, $fromKey] = explode('.', $from);
 
-            Schema::table($fromName,
+            Schema::table(
+                $fromName,
                 static function (Blueprint $table) use ($fromKey) {
                     $table->dropForeign($fromKey);
-                });
+                }
+            );
         }
     }
 }
