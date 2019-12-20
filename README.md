@@ -8,7 +8,7 @@ Diplodocker project helpers
 
 ### Install
 * Install [laravel](https://laravel.com/docs/master/installation) =)
-* `composer require diplodocker/foreign-loader`
+* `composer require --dev diplodocker/foreign-loader`
 
 
 ### Use class
