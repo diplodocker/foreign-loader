@@ -6,7 +6,6 @@ git:
 
 language: php
 php:
-  - '7.2'
   - '7.3'
   - '7.4'
 
@@ -15,5 +14,4 @@ script:
   - composer install
   - composer style-check
   - composer security-check
-  - make phpcs
 
