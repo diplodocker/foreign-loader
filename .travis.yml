@@ -12,5 +12,8 @@ php:
 
 script:
   - make environment
-  - make test
+  - composer install
+  - composer style-check
+  - composer security-check
+  - make phpcs
 

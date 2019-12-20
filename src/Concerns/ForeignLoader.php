@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Schema;
  * Trait for load foreign keys from migration file
  * @see README.md
  * Trait ForeignLoader
- * @package Database\Concerns
  */
 trait ForeignLoader
 {
