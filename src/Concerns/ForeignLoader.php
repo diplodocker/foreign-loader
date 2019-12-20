@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Diplodocker\Concerns;
 
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 /**
  * Trait for load foreign keys from migration file
@@ -20,10 +20,14 @@ trait ForeignLoader
     protected function loadForeignKeys(): void
     {
         foreach ($this->keys as $from => $to) {
-            list($fromName, $fromKey) = explode('.', $from);
-            list($toName, $toKey) = explode('.', $to);
+            [$fromName, $fromKey] = explode('.', $from);
+            [$toName, $toKey] = explode('.', $to);
 
-            Schema::table($fromName, function (Blueprint $table) use ($fromKey, $toKey, $toName) {
+            Schema::table($fromName, static function (Blueprint $table) use (
+                $fromKey,
+                $toKey,
+                $toName
+            ) {
                 $table->foreign($fromKey)
                     ->references($toKey)
                     ->on($toName)
@@ -39,12 +43,13 @@ trait ForeignLoader
     protected function dropForeignKeys(): void
     {
         foreach ($this->keys as $from => $on) {
-            list($fromName,) = explode('.', $from);
-            list(, $fromKey) = explode('.', $from);
+            [$fromName,] = explode('.', $from);
+            [, $fromKey] = explode('.', $from);
 
-            Schema::table($fromName, function (Blueprint $table) use ($fromKey) {
-                $table->dropForeign($fromKey);
-            });
+            Schema::table($fromName,
+                static function (Blueprint $table) use ($fromKey) {
+                    $table->dropForeign($fromKey);
+                });
         }
     }
 }
