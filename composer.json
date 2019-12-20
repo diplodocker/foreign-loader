@@ -7,7 +7,7 @@
     "keywords": ["laravel","migrations","diplodocker","laravel-package"],
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.1.3"
+        "php": "^7.3.0"
     },
     "autoload": {
         "psr-4": {
@@ -20,5 +20,13 @@
                 "Diplodocker\\Providers\\ForeignLoaderProvider"
             ]
         }
+    },
+    "require-dev": {
+        "slevomat/coding-standard": "dev-master"
+    },
+    "scripts": {
+        "security-check": "curl https://get.sensiolabs.org/security-checker.phar --output security-checker.phar && php security-checker.phar security:check ./composer.lock",
+        "style-check": "vendor/bin/phpcs --standard=ruleset.xml --extensions=php --tab-width=4 -sp src",
+        "style-fix": "vendor/bin/phpcbf --standard=ruleset.xml --extensions=php --tab-width=4 -sp src"
     }
 }

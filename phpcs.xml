@@ -7,7 +7,6 @@
         <exclude name="PSR2.Namespaces.UseDeclaration.MultipleDeclarations"/>
         <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
     </rule>
-
     <rule ref="PSR2.Files.EndFileNewline"/>
     <rule ref="Generic.Files.ByteOrderMark"/>
     <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
@@ -19,7 +18,6 @@
     <rule ref="Generic.PHP.LowerCaseConstant"/>
     <rule ref="Squiz.Functions.LowercaseFunctionKeywords"/>
     <rule ref="Squiz.Classes.ValidClassName"/>
-
     <rule ref="Squiz.NamingConventions.ValidVariableName.PrivateNoUnderscore">
         <severity>0</severity>
     </rule>
@@ -34,5 +32,4 @@
             <property name="eolChar" value="\n"/>
         </properties>
     </rule>
-
 </ruleset>

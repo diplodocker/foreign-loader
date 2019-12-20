@@ -1,16 +1,19 @@
 ---
-dist: xenial
+dist: bionic
 
 git:
   quiet: true
 
 language: php
 php:
-  - '7.1'
   - '7.2'
   - '7.3'
+  - '7.4'
 
 script:
   - make environment
-  - make test
+  - composer install
+  - composer style-check
+  - composer security-check
+  - make phpcs
 
